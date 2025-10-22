@@ -221,6 +221,9 @@ bool if_zhishu(int a){
 
 
 int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    //如果区间较大（如上亿），cout 输出太频繁也会拖慢程序，可以改为缓冲输出。
 
     zhishubiao();
 
