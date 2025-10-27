@@ -16,9 +16,11 @@
 
 */
 
+
 #include<stdio.h>
 #include<iostream>
 using namespace std;
+
 int main()
 {
     int a,b,c,b_1,b_2,b_3,c_1,c_2,c_3,c_4,c_5,e;
@@ -34,7 +36,10 @@ int main()
     c_5=(c-c_1*10000-c_2*1000-c_3*100-c_4*10);
     //cout<<a<<b_1<<b_2<<b_3<<c_1<<c_2<<c_3<<c_4<<c_5;
     
+    
     e=(a*1+b_1*2+b_2*3+b_3*4+c_1*5+c_2*6+c_3*7+c_4*8+c_5*9)%11;
+
+
     if(e==10){
         e='X';
     }else{
@@ -50,5 +55,7 @@ int main()
         printf("%d-%d-%d-%d",a,b,c,e-'0');
     }
 
+
     return 0;
 }
+
