@@ -14,9 +14,10 @@ int main(){
     }
     int sum=0;
     int a=0;
+    int b=0;
     for(;;){
         sum=0;
-        for(int i=0;i+1<=n-1;i++){
+        for(int i=0;i+1<=n-1-b;i++){
             
             if(shuzu[i]>shuzu[i+1]){
                 a=shuzu[i];
@@ -26,9 +27,11 @@ int main(){
             }
 
         }
+
         if(sum==0){
             break;
         }
+        b+=1;
     }
 
 
