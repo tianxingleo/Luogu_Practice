@@ -17,10 +17,12 @@
 // 一个整数，表示测验题答案。
 
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <stdbool.h>
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <stdbool.h>
+#include <bits/stdc++.h>
+
 
 using namespace std;
 bool a[10001];
