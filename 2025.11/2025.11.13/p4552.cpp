@@ -3,21 +3,20 @@ using namespace std;
 
 int main(){
     int n;
-    cin>>n;
-    vector<int>arr(n,0);
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
-    vector<int>diff(n+1,0);
-    diff[0]=arr[0];
+    cin >> n;
+    vector<long long> a(n);
+    for(int i=0;i<n;i++) cin >> a[i];
+
+    vector<long long> diff(n);
+    diff[0] = a[0];
+    for(int i=1;i<n;i++) diff[i] = a[i] - a[i-1];
+
+    long long pos = 0, neg = 0;
     for(int i=1;i<n;i++){
-        diff[i]=arr[i]-arr[i-1];
+        if(diff[i] > 0) pos += diff[i];
+        else neg -= diff[i];
     }
-    int sum=0;
-    for(int i=1;i<n;i++){
-        if(diff[i]>0){
-            sum+=diff[i];
-        }
-    }
-    cout<<sum<<endl<<*max_element(arr.begin(),arr.end())-*min_element(arr.begin(),arr.end())+1;
+
+    cout << max(pos, neg) << "\n" << abs(pos - neg) + 1 << "\n";
+    return 0;
 }
